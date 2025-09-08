@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ecommerce-platform",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+    "logo": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=200",
+    "title": "E-commerce Platform Redesign",
+    "description": "Complete platform overhaul resulting in 300% increase in conversions and improved user experience for a leading retail brand.",
+    "previewUrl": "https://example.com/ecommerce",
+    "metrics": [
+      { "value": "300%", "label": "Conversion Increase" },
+      { "value": "45%", "label": "Faster Load Times" },
+      { "value": "150+", "label": "Products Migrated" }
+    ]
+  },
+  {
+    "id": "healthcare-system",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+    "logo": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=200",
+    "title": "Healthcare Management System",
+    "description": "Comprehensive patient management system with real-time analytics, reducing administrative overhead by 60%.",
+    "previewUrl": "https://example.com/healthcare",
+    "metrics": [
+      { "value": "60%", "label": "Reduced Overhead" },
+      { "value": "99.9%", "label": "Uptime" },
+      { "value": "50K+", "label": "Patients Served" }
+    ]
+  },
+  {
+    "id": "fintech-app",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+    "logo": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=200",
+    "title": "FinTech Mobile Application",
+    "description": "Secure mobile banking solution with biometric authentication, serving over 100K active users daily.",
+    "previewUrl": "https://example.com/fintech",
+    "metrics": [
+      { "value": "100K+", "label": "Daily Users" },
+      { "value": "4.8★", "label": "App Store Rating" },
+      { "value": "24/7", "label": "Availability" }
+    ]
+  },
+  {
+    "id": "ai-analytics",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+    "logo": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=200",
+    "title": "AI-Powered Analytics Platform",
+    "description": "Machine learning platform that processes millions of data points to provide actionable business insights.",
+    "previewUrl": "https://example.com/ai-analytics",
+    "metrics": [
+      { "value": "85%", "label": "Prediction Accuracy" },
+      { "value": "10M+", "label": "Data Points/Day" },
+      { "value": "50+", "label": "Clients" }
+    ]
+  }
+]
