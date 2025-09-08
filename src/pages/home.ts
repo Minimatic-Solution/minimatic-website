@@ -2,7 +2,7 @@ import { html } from "hono/html";
 import About from "../components/home/about";
 import Hero from "../components/home/hero";
 import Portfolio from "../components/home/portfolio";
-import Service from "../components/home/service";
+import Service from "../components/home/service/service";
 
 const Home = () => html` ${Hero()} ${Service()} ${About()} ${Portfolio()} `;
 
