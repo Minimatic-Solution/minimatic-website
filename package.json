@@ -5,8 +5,8 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
-    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css",
+    "watch:css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
