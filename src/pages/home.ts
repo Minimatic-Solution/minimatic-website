@@ -1,5 +1,5 @@
 import { html } from "hono/html";
-import About from "../components/home/about";
+import About from "../components/home/about/about";
 import Hero from "../components/home/hero";
 import Portfolio from "../components/home/portfolio";
 import Service from "../components/home/service/service";
