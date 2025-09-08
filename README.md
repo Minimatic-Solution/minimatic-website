@@ -1,14 +1,28 @@
 # Minimatic Solutions
 
-Minimatic Solutions is a modern web application showcasing a portfolio of innovative software projects and services. Built with Hono (TypeScript), TailwindCSS, and designed for deployment on Cloudflare Workers, it demonstrates technical excellence and a commitment to client success.
+Minimatic Solutions is a forward-thinking software company specializing in building innovative, scalable, and impactful digital solutions for businesses worldwide. Our main website serves as the central hub for our company profile, services, portfolio, and contact information.
 
-## Features
+## About Us
 
-- Portfolio of real-world projects (E-commerce, Healthcare, FinTech, AI Analytics)
-- Project details: description, metrics, technologies, features, client, year, gallery
-- Service overview and development process
-- Responsive, modern UI with TailwindCSS
-- Live project previews
+Founded by a team of passionate technologists, Minimatic Solutions delivers custom software, web applications, and digital products that drive business growth and efficiency. With over 5 years of experience and 150+ successful projects, we combine creativity, technical expertise, and strategic thinking to solve real-world problems.
+
+## What We Do
+
+- **Custom Software Development**: Tailored solutions for unique business needs
+- **Web & Mobile Applications**: Modern, responsive, and user-friendly apps
+- **Cloud & DevOps**: Scalable infrastructure and deployment on platforms like Cloudflare
+- **AI & Analytics**: Data-driven insights and automation
+- **Consulting & Strategy**: End-to-end guidance from ideation to launch
+
+## Website Overview
+
+Our main website showcases:
+
+- Company mission, values, and team
+- Detailed portfolio of completed projects (E-commerce, Healthcare, FinTech, AI Analytics, and more)
+- Service offerings and development process
+- Contact and inquiry forms for potential clients
+- Live previews and case studies
 
 ## Technologies Used
 
@@ -16,9 +30,9 @@ Minimatic Solutions is a modern web application showcasing a portfolio of innova
 - Hono (Web framework)
 - TailwindCSS
 - Cloudflare Workers
-- Wrangler (deployment & type generation)
+- Wrangler
 
-## Getting Started
+## Getting Started (For Developers)
 
 Install dependencies:
 
@@ -56,10 +70,10 @@ npm run cf-typegen
 - `public/` - Static assets (CSS, images, JS)
 - `src/data/projects.json` - Project portfolio data
 
-## Author
+## Contact
 
-Minimatic Solutions Team
+For business inquiries, collaborations, or more information, please visit our website or reach out via the contact form.
 
 ---
 
-For more details, see the code and explore the live preview links in the portfolio section.
+Minimatic Solutions Team
