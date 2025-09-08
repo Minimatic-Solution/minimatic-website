@@ -1,8 +1,9 @@
 import { html } from "hono/html";
+import About from "../components/home/about";
 import Hero from "../components/home/hero";
 import Portfolio from "../components/home/portfolio";
 import Service from "../components/home/service";
 
-const Home = () => html` ${Hero()} ${Service()} ${Portfolio()} `;
+const Home = () => html` ${Hero()} ${Service()} ${About()} ${Portfolio()} `;
 
 export default Home;
