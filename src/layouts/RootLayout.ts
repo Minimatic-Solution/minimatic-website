@@ -12,7 +12,7 @@ const RootLayout = (props: { title: string; children: any }) => html`
     </head>
     <body class="font-sans min-h-screen bg-background text-gray-900">
       ${Navbar()}
-      <main class="container mx-auto px-6 py-10">${props.children}</main>
+      <main class="">${props.children}</main>
     </body>
     <script src="/js/index.js" type="module"></script>
   </html>
