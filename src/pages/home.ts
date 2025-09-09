@@ -5,9 +5,10 @@ import Contact from "../components/home/contact/contact";
 import Hero from "../components/home/hero";
 import Portfolio from "../components/home/portfolio/portfolio";
 import Service from "../components/home/service/service";
+import TechStack from "../components/home/techStack";
 
 const Home = () =>
   html` ${Hero()} ${Service()} ${About()} ${AiExcellence()} ${Portfolio()}
-  ${Contact()}`;
+  ${TechStack()} ${Contact()}`;
 
 export default Home;
