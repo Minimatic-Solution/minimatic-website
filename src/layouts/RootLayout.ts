@@ -1,4 +1,5 @@
 import { html } from "hono/html";
+import Footer from "../components/footer/footer";
 import Navbar from "../components/navbar/Navbbar";
 
 const RootLayout = (props: { title: string; children: any }) => html`
@@ -14,6 +15,7 @@ const RootLayout = (props: { title: string; children: any }) => html`
       ${Navbar()}
       <main class="">${props.children}</main>
     </body>
+    ${Footer()}
     <script src="/js/index.js" type="module"></script>
   </html>
 `;
