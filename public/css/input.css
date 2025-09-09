@@ -130,6 +130,15 @@
       transform: translateY(-20px);
     }
   }
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
 }
 
 @layer utilities {
@@ -209,6 +218,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  .contact-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .pulse-dot {
+    animation: pulse 2s infinite;
   }
 }
 
