@@ -2,11 +2,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
-}
-
 @supports not (scroll-behavior: smooth) {
   html {
     overflow-y: auto;
@@ -168,6 +163,10 @@ html {
 
   button {
     cursor: pointer;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
   }
 }
 
