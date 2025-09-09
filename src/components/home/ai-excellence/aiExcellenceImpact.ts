@@ -74,7 +74,7 @@ const AiExcellenceImpact = () => html`
               <div
                 class="stats-counter text-4xl lg:text-5xl font-black text-white mb-2"
               >
-                2500+
+                500+
               </div>
               <div class="text-white/80 font-medium">Projects Delivered</div>
             </div>
