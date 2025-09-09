@@ -2,9 +2,11 @@ import { initAbout } from "./about.js";
 import { initAiExcellence } from "./ai-excellence.js";
 import { initContact } from "./contact.js";
 import { initNavbar } from "./navbar.js";
-import { initSmoothScroll } from "./utils/smoothScroll.js";
+import { initScrollReveal } from "./scroll-reveal.js";
+import { initSmoothScroll } from "./smoothScroll.js";
 
 initSmoothScroll();
+initScrollReveal();
 initNavbar();
 initAbout();
 initContact();

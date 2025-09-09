@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const ServiceCTA = () => html`
-  <div class="text-center mt-16">
+  <div class="scroll-reveal text-center mt-16">
     <h3 class="text-2xl font-bold text-foreground mb-4">
       Ready to Start Your Project?
     </h3>

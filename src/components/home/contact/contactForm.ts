@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const ContactForm = () => html`
-  <section class="fade-in stagger-1">
+  <section class="fade-in stagger-1 scroll-reveal">
     <div
       class="contact-card p-8 lg:p-10 rounded-3xl border border-gray-200 shadow-xl"
     >

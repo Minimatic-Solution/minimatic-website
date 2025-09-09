@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const AiExcellenceHeader = () => html`
-  <div class="text-center mb-16 lg:mb-24">
+  <div class="text-center mb-16 lg:mb-24 scroll-reveal">
     <div
       class="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6 border border-blue-200"
     >

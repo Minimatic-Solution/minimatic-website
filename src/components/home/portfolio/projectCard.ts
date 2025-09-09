@@ -2,7 +2,7 @@ import { html } from "hono/html";
 
 const ProjectCard = ({ image, logo, title, description, metrics }) => html`
   <div
-    class="group contact-card shadow-lg rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+    class="group contact-card shadow-lg rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full scroll-reveal"
   >
     <!-- Image -->
     <div class="relative aspect-[16/9] overflow-hidden">

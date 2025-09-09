@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const AiExcellenceImpact = () => html`
-  <div class="relative overflow-hidden">
+  <div class="relative overflow-hidden scroll-reveal">
     <div
       class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-3xl"
     ></div>
