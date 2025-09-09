@@ -20,7 +20,7 @@ const Footer = () => html`
           <h4 class="font-semibold text-white mb-4">Quick Links</h4>
           <ul class="space-y-2 text-sm">
             <li><a href="#about" class="hover:text-accent">About Us</a></li>
-            <li><a href="#services" class="hover:text-accent">Services</a></li>
+            <li><a href="#portfolio" class="hover:text-accent">Services</a></li>
             <li><a href="#projects" class="hover:text-accent">Projects</a></li>
             <li><a href="#contact" class="hover:text-accent">Contact</a></li>
           </ul>
