@@ -5,13 +5,7 @@
   "compatibility_date": "2025-09-07",
   "assets": {
     "directory": "./public"
-  },
-  "routes": [
-    {
-      "pattern": "minimatic.solutions",
-      "custom_domain": true
-    }
-  ]
+  }
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
