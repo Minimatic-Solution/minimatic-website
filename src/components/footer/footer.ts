@@ -83,7 +83,7 @@ const Footer = () => html`
           reserved.
         </p>
         <div class="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" class="hover:text-accent">Privacy Policy</a>
+          <a href="/privacy-policy" class="hover:text-accent">Privacy Policy</a>
         </div>
       </div>
     </div>
