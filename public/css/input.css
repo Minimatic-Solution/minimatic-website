@@ -163,6 +163,11 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  .bg-card {
+    background-color: var(--card);
+  }
+
   .hero-gradient {
     background: linear-gradient(
       135deg,

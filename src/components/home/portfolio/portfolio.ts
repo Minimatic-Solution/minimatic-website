@@ -4,7 +4,7 @@ import PortfolioHeader from "./portfolioHeader";
 import ProjectCard from "./projectCard";
 
 const Portfolio = () => html`
-  <section id="portfolio" class="py-16 lg:py-24">
+  <section id="portfolio" class="py-16 lg:py-24 bg-gray-100">
     <div class="container mx-auto px-4">
       ${PortfolioHeader()}
 
