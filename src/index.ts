@@ -19,7 +19,7 @@ app.get("/projects/:id", (c) => {
   const id = c.req.param("id");
   return c.html(
     RootLayout({
-      title: "Project Details",
+      title: "Project Details | Minimatic Solutions",
       children: ProjectDetails(id),
     })
   );
@@ -28,7 +28,7 @@ app.get("/projects/:id", (c) => {
 app.get("/privacy-policy", (c) => {
   return c.html(
     RootLayout({
-      title: "Privacy Policy",
+      title: "Privacy Policy | Minimatic Solutions",
       children: PrivacyPolicy(),
     })
   );
