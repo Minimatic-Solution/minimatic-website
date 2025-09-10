@@ -76,10 +76,10 @@ const Gallery = (gallery, title) => html`
         </div>
       </div>
 
-      <!-- Loading indicator -->
+      <!-- Loading indicator (hidden by default) -->
       <div
         id="loading-indicator"
-        class="absolute inset-0 flex items-center justify-center"
+        class="hidden absolute inset-0 flex items-center justify-center"
       >
         <div
           class="animate-spin rounded-full h-12 w-12 border-b-2 border-white"

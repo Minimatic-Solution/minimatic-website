@@ -6,6 +6,7 @@ export function initGallery() {
   const nextBtn = document.getElementById("next-btn");
   const currentIndexSpan = document.getElementById("current-index");
   const galleryItems = document.querySelectorAll(".gallery-item");
+  const loadingIndicator = document.getElementById("loading-indicator");
 
   // Check if gallery elements exist
   if (
@@ -40,9 +41,28 @@ export function initGallery() {
     if (index < 0 || index >= images.length) return;
 
     currentImageIndex = index;
-    modalImage.src = images[index];
+
+    // show loading indicator
+    if (loadingIndicator) {
+      loadingIndicator.classList.remove("hidden");
+    }
+
+    // clear old image first
+    modalImage.src = "";
+    modalImage.alt = "";
+
+    // new image load
+    const imageUrl = images[index];
+    modalImage.src = imageUrl;
     modalImage.alt = `${imageTitle} screenshot ${index + 1}`;
     currentIndexSpan.textContent = index + 1;
+
+    // hide loader when image finishes loading
+    modalImage.onload = () => {
+      if (loadingIndicator) {
+        loadingIndicator.classList.add("hidden");
+      }
+    };
 
     modal.classList.remove("opacity-0", "pointer-events-none");
     modal.classList.add("opacity-100");
@@ -140,7 +160,6 @@ export function initGallery() {
     }
   }
 
-  // Add keyboard event listener
   document.addEventListener("keydown", handleKeydown);
 
   // Touch/swipe support for mobile
@@ -162,16 +181,14 @@ export function initGallery() {
 
     if (Math.abs(diff) > swipeThreshold) {
       if (diff > 0) {
-        // Swiped left - next image
         nextImage();
       } else {
-        // Swiped right - previous image
         prevImage();
       }
     }
   }
 
-  // Preload images for better performance
+  // Preload images
   function preloadImages() {
     images.forEach((imageUrl, index) => {
       if (index !== currentImageIndex) {
@@ -181,7 +198,6 @@ export function initGallery() {
     });
   }
 
-  // Initialize preloading
   if (images.length > 0) {
     preloadImages();
   }
@@ -195,10 +211,8 @@ export function initGallery() {
   // Handle window resize
   function handleResize() {
     if (!modal.classList.contains("pointer-events-none")) {
-      // Adjust modal image size if needed
       const maxWidth = window.innerWidth * 0.9;
       const maxHeight = window.innerHeight * 0.9;
-
       modalImage.style.maxWidth = maxWidth + "px";
       modalImage.style.maxHeight = maxHeight + "px";
     }
@@ -206,12 +220,11 @@ export function initGallery() {
 
   window.addEventListener("resize", handleResize);
 
-  // Cleanup function (optional - for when component unmounts)
+  // Cleanup function
   function cleanup() {
     document.removeEventListener("keydown", handleKeydown);
     window.removeEventListener("resize", handleResize);
   }
 
-  // Return cleanup function if needed
   return cleanup;
 }
