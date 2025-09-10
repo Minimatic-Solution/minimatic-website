@@ -9,7 +9,7 @@ const ProjectCard = ({ image, logo, title, description, metrics }) => html`
       <img
         src="${image}"
         alt="${title}"
-        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+        class="w-full h-full object-center transform group-hover:scale-105 transition-transform duration-500"
       />
     </div>
 
