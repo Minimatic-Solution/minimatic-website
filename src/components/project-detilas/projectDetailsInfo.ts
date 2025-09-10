@@ -1,4 +1,5 @@
 import { html } from "hono/html";
+import Gallery from "./gallery";
 
 const ProjectDetailsInfo = (
   client,
@@ -56,25 +57,8 @@ const ProjectDetailsInfo = (
     </div>
   </div>
 
-  <!-- Gallery -->
-  <div>
-    <h2 class="text-2xl font-semibold mb-6 text-center">
-      📸 Project Screenshots
-    </h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      ${gallery.map(
-        (g) =>
-          html`<div
-            class="overflow-hidden rounded-xl shadow-lg hover:scale-[1.02] transition"
-          >
-            <img
-              src="${g}"
-              alt="${title} screenshot"
-              class="w-full h-full object-cover"
-            />
-          </div>`
-      )}
-    </div>
-  </div>
+  <!-- Gallery Section -->
+  ${Gallery(gallery, title)}
 </div>`;
+
 export default ProjectDetailsInfo;
