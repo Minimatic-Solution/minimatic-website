@@ -9,8 +9,8 @@ export function initChat() {
 
   if (!chatButton || !chatSidebar || !chatClose) return;
 
-  const API_URL = "http://localhost:3001/api/chat";
-  const API_KEY = "chatnex_sk_DU6uqX94yfqNCaBLrFSXRJn_nF_Ng9g-_AGo9Qp7K5A";
+  const API_URL = "https://chatnex.takiuddin.me/api/chat";
+  const API_KEY = "chatnex_sk_VgdYXdHxWCotJObXQdtdIiX9Qi3juNJUTFdRKYwZk9Q";
 
   // State management
   let isChatOpen = false;

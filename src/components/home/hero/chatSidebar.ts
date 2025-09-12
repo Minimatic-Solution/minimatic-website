@@ -92,7 +92,7 @@ const ChatSidebar = () => html`
           class="bg-accent hover:bg-accent/90 text-accent-foreground p-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <svg
-            class="h-4 w-4"
+            class="h-4 w-4 rotate-90"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
