@@ -9,9 +9,7 @@ export function initChat() {
 
   if (!chatButton || !chatSidebar || !chatClose) return;
 
-  // const API_URL = "https://chatnex.takiuddin.me/api/chat";
   const API_URL = "http://localhost:3001/api/chat";
-  // const API_KEY = "chatnex_sk_w2dIxxEyeN3qIZN-Ur1fCgh4lxE2dtZ43p6X9lnVaXI";
   const API_KEY = "chatnex_sk_DU6uqX94yfqNCaBLrFSXRJn_nF_Ng9g-_AGo9Qp7K5A";
 
   // State management
@@ -19,29 +17,31 @@ export function initChat() {
   let conversationId = null;
   let isLoading = false;
 
+  // Format time → e.g. "10:35 PM"
+  function formatTime(date) {
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  }
+
   // Open chat
   function openChat() {
     if (isChatOpen) return;
-
     isChatOpen = true;
     chatSidebar.classList.remove("translate-x-full");
-
-    // Focus on input after animation
-    setTimeout(() => {
-      chatInput.focus();
-    }, 300);
+    setTimeout(() => chatInput.focus(), 300);
   }
 
   // Close chat
   function closeChat() {
     if (!isChatOpen) return;
-
     isChatOpen = false;
     chatSidebar.classList.add("translate-x-full");
   }
 
   // Add message to chat
   function addMessage(message, isUser = false) {
+    const now = new Date();
+    const timeString = formatTime(now);
+
     const messageDiv = document.createElement("div");
     messageDiv.className = "flex gap-3";
 
@@ -50,7 +50,7 @@ export function initChat() {
       messageDiv.innerHTML = `
         <div class="bg-accent text-accent-foreground p-3 rounded-lg rounded-tr-none max-w-xs">
           <p class="text-sm">${message}</p>
-          <span class="text-xs opacity-70 mt-1 block">Just now</span>
+          <span class="text-xs opacity-70 mt-1 block">${timeString}</span>
         </div>
         <div class="bg-accent/20 p-2 rounded-full h-fit">
           <svg class="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export function initChat() {
         </div>
         <div class="bg-muted p-3 rounded-lg rounded-tl-none max-w-xs">
           <p class="text-sm text-card-foreground">${message}</p>
-          <span class="text-xs text-muted-foreground mt-1 block">Just now</span>
+          <span class="text-xs text-muted-foreground mt-1 block">${timeString}</span>
         </div>
       `;
     }
@@ -76,7 +76,7 @@ export function initChat() {
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-  // Add typing indicator
+  // Typing indicator
   function addTypingIndicator() {
     const typingDiv = document.createElement("div");
     typingDiv.className = "flex gap-3";
@@ -95,30 +95,20 @@ export function initChat() {
         </div>
       </div>
     `;
-
     chatMessages.appendChild(typingDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-  // Remove typing indicator
   function removeTypingIndicator() {
     const typingIndicator = document.getElementById("typing-indicator");
-    if (typingIndicator) {
-      typingIndicator.remove();
-    }
+    if (typingIndicator) typingIndicator.remove();
   }
 
-  // Send message to API
+  // Send to API
   async function sendMessageToAPI(question) {
     try {
-      const payload = {
-        question: question,
-      };
-
-      // Add conversationId if exists
-      if (conversationId) {
-        payload.conversationId = conversationId;
-      }
+      const payload = { question };
+      if (conversationId) payload.conversationId = conversationId;
 
       const response = await fetch(API_URL, {
         method: "POST",
@@ -129,17 +119,11 @@ export function initChat() {
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
+      if (!response.ok)
         throw new Error(`HTTP error! status: ${response.status}`);
-      }
 
       const data = await response.json();
-
-      // Update conversationId from response
-      if (data.conversationId) {
-        conversationId = data.conversationId;
-      }
-
+      if (data.conversationId) conversationId = data.conversationId;
       return data.answer || "Sorry, I couldn't process your request right now.";
     } catch (error) {
       console.error("Error sending message:", error);
@@ -152,34 +136,21 @@ export function initChat() {
     const message = chatInput.value.trim();
     if (!message || isLoading) return;
 
-    // Set loading state
     isLoading = true;
     chatSend.disabled = true;
 
-    // Add user message
     addMessage(message, true);
     chatInput.value = "";
-
-    // Add typing indicator
     addTypingIndicator();
 
     try {
-      // Send to API
       const response = await sendMessageToAPI(message);
-
-      // Remove typing indicator
       removeTypingIndicator();
-
-      // Add bot response
       addMessage(response, false);
     } catch (error) {
-      // Remove typing indicator
       removeTypingIndicator();
-
-      // Add error message
       addMessage("Sorry, there was an error. Please try again.", false);
     } finally {
-      // Reset loading state
       isLoading = false;
       chatSend.disabled = false;
       chatInput.focus();
@@ -189,9 +160,7 @@ export function initChat() {
   // Event listeners
   chatButton.addEventListener("click", openChat);
   chatClose.addEventListener("click", closeChat);
-
   chatSend.addEventListener("click", sendMessage);
-
   chatInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -199,10 +168,7 @@ export function initChat() {
     }
   });
 
-  // ESC key to close chat
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isChatOpen) {
-      closeChat();
-    }
+    if (e.key === "Escape" && isChatOpen) closeChat();
   });
 }
