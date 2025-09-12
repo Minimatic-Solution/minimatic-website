@@ -9,10 +9,10 @@ export function initChat() {
 
   if (!chatButton || !chatSidebar || !chatClose) return;
 
-  // Chat API configuration
-  const API_URL = "https://chatnex.takiuddin.me/api/chat";
-  const USER_ID = "3754a175-4c73-4e11-97cc-7d0238ef5b0d"; // Static user ID
-  const API_KEY = "chatnex_sk_rnvuCjEhcybmsm393ZCLaasS0J4SvSBFz3lhNSQqgag";
+  // const API_URL = "https://chatnex.takiuddin.me/api/chat";
+  const API_URL = "http://localhost:3001/api/chat";
+  // const API_KEY = "chatnex_sk_w2dIxxEyeN3qIZN-Ur1fCgh4lxE2dtZ43p6X9lnVaXI";
+  const API_KEY = "chatnex_sk_DU6uqX94yfqNCaBLrFSXRJn_nF_Ng9g-_AGo9Qp7K5A";
 
   // State management
   let isChatOpen = false;
@@ -113,7 +113,6 @@ export function initChat() {
     try {
       const payload = {
         question: question,
-        userId: USER_ID,
       };
 
       // Add conversationId if exists
@@ -125,6 +124,7 @@ export function initChat() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": API_KEY,
         },
         body: JSON.stringify(payload),
       });
