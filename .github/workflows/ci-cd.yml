@@ -4,6 +4,7 @@ env:
   SERVICE_NAME: minimatic-website
   PROJECT_ID: radiant-voyage-464621-j1
   DOCKER_IMAGE_URL: asia-southeast1-docker.pkg.dev/radiant-voyage-464621-j1/minimatic-website/minimatic-app
+  GCP_REGION: asia-southeast1
 
 on:
   push:
@@ -29,7 +30,7 @@ jobs:
 
       - name: Configure Docker
         run: |
-          gcloud auth configure-docker asia-southeast1-docker.pkg.dev
+          gcloud auth configure-docker ${{ env.GCP_REGION }}-docker.pkg.dev
 
       - name: Build and Push Docker Image
         run: |
@@ -42,5 +43,5 @@ jobs:
           gcloud run deploy $SERVICE_NAME \
             --image ${{ env.DOCKER_IMAGE_URL }}:latest \
             --platform managed \
-            --region us-east1 \
+            --region ${{ env.GCP_REGION }} \
             --allow-unauthenticated
