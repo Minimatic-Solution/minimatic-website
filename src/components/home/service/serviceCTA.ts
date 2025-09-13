@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const ServiceCTA = () => html`
-  <div class="text-center mt-16">
+  <div class="scroll-reveal text-center mt-16">
     <h3 class="text-2xl font-bold text-foreground mb-4">
       Ready to Start Your Project?
     </h3>
@@ -11,17 +11,16 @@ const ServiceCTA = () => html`
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <button
-        onclick="handleScheduleCall()"
-        class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground transition-colors"
+        class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground transition-colors schedule-call-btn"
       >
         Schedule Consultation
       </button>
-      <button
-        onclick="handleViewPortfolio()"
+      <a
         class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium rounded-lg border border-border hover:bg-muted bg-transparent transition-colors"
+        href="#portfolio"
       >
         View Our Work
-      </button>
+      </a>
     </div>
   </div>
 `;

@@ -19,22 +19,22 @@ const Navbar = () => html`
         <!-- Middle: Navigation Items (Desktop) -->
         <div class="hidden md:flex items-center space-x-8">
           <a
-            href="#services"
+            href="/#services"
             class="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >Services</a
           >
           <a
-            href="#about"
+            href="/#about"
             class="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >About</a
           >
           <a
-            href="#portfolio"
+            href="/#portfolio"
             class="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >Portfolio</a
           >
           <a
-            href="#contact"
+            href="/#contact"
             class="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >Contact</a
           >
@@ -84,22 +84,22 @@ const Navbar = () => html`
       <div id="mobile-menu" class="hidden md:hidden border-t border-border">
         <div class="px-2 pt-2 pb-3 space-y-1">
           <a
-            href="#services"
+            href="/#services"
             class="block px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors font-medium"
             >Services</a
           >
           <a
-            href="#about"
+            href="/#about"
             class="block px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors font-medium"
             >About</a
           >
           <a
-            href="#portfolio"
+            href="/#portfolio"
             class="block px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors font-medium"
             >Portfolio</a
           >
           <a
-            href="#contact"
+            href="/#contact"
             class="block px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors font-medium"
             >Contact</a
           >

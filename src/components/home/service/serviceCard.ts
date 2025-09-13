@@ -2,7 +2,7 @@ import { html } from "hono/html";
 
 export const ServiceCard = ({ title, description, iconColor, iconSvg }) => html`
   <div
-    class="bg-card border border-border rounded-lg p-8 hover:shadow-lg transition-all duration-300 group"
+    class=" bg-card border border-border rounded-lg p-8 hover:shadow-lg transition-all duration-300 group"
   >
     <div
       class="bg-${iconColor}/10 p-4 rounded-lg w-fit mb-6 group-hover:bg-${iconColor}/20 transition-colors"

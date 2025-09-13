@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const AboutWhoWeAre = () => html`
-  <section class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+  <section class="scroll-reveal grid lg:grid-cols-2 gap-16 items-center mb-20">
     <!-- Left Content -->
     <article class="space-y-8 fade-in stagger-1">
       <div>

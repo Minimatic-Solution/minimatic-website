@@ -24,9 +24,9 @@ const Hero = () => html`
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4">
             <button
-              class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground transition transform active:scale-95"
+              class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground transition transform active:scale-95 schedule-call-btn"
             >
-              Get Started
+              Schedule a Call
               <svg
                 class="ml-2 h-5 w-5"
                 fill="none"
@@ -41,11 +41,12 @@ const Hero = () => html`
                 />
               </svg>
             </button>
-            <button
+            <a
               class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg border border-border hover:bg-muted bg-transparent transition transform active:scale-95"
+              href="#contact"
             >
-              Request a Demo
-            </button>
+              Get in Touch
+            </a>
           </div>
 
           <!-- Trust Indicators -->

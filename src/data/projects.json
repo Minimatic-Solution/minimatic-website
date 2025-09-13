@@ -1,110 +1,118 @@
 [
   {
-    "id": "ecommerce-platform",
-    "title": "E-commerce Platform Redesign",
-    "description": "Complete platform overhaul resulting in 300% increase in conversions and improved user experience for a leading retail brand.",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
-    "logo": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=200",
-    "previewUrl": "https://example.com/ecommerce",
+    "id": "ai-portfolio",
+    "title": "AI-Powered Portfolio Website",
+    "description": "Personal portfolio with integrated AI chatbot for interactive user engagement and smart project showcasing.",
+    "image": "/images/ai-portfolio-01.png",
+    "logo": "/images/ai-portfolio-logo.png",
+    "previewUrl": "https://takiuddin.me/",
     "metrics": [
-      { "value": "300%", "label": "Conversion Increase" },
-      { "value": "45%", "label": "Faster Load Times" },
-      { "value": "150+", "label": "Products Migrated" }
+      { "value": "5k+", "label": "Monthly Visitors" },
+      { "value": "70%", "label": "Visitor Retention" },
+      { "value": "100%", "label": "Responsive Design" }
     ],
-    "technologies": ["Next.js", "TailwindCSS", "Stripe API", "Node.js"],
+    "technologies": [
+      "HTML",
+      "TailwindCSS",
+      "Gemini Api",
+      "Node.js",
+      "Express.js",
+      "Langchain",
+      "PgVector",
+      "PostgreSQL"
+    ],
     "features": [
-      "Custom checkout flow",
-      "Real-time inventory sync",
-      "SEO-optimized product pages",
-      "Admin dashboard with analytics"
+      "AI-powered chatbot for instant Q&A",
+      "Dynamic portfolio content",
+      "SEO-optimized pages",
+      "Dark/light theme toggle"
     ],
-    "client": "Leading Retail Brand",
-    "year": "2024",
-    "gallery": [
-      "https://picsum.photos/id/1015/1200/800",
-      "https://picsum.photos/id/1016/1200/800",
-      "https://picsum.photos/id/1018/1200/800"
-    ]
-  },
-  {
-    "id": "healthcare-system",
-    "title": "Healthcare Management System",
-    "description": "Comprehensive patient management system with real-time analytics, reducing administrative overhead by 60%.",
-    "image": "https://images.unsplash.com/photo-1504814532849-92792bd27961?w=1200",
-    "logo": "https://images.unsplash.com/photo-1588776814546-ec7ed7b53a27?w=200",
-    "previewUrl": "https://example.com/healthcare",
-    "metrics": [
-      { "value": "60%", "label": "Reduced Overhead" },
-      { "value": "99.9%", "label": "Uptime" },
-      { "value": "50K+", "label": "Patients Served" }
-    ],
-    "technologies": ["React", "Django", "PostgreSQL", "Redis"],
-    "features": [
-      "Electronic health records (EHR)",
-      "Appointment scheduling",
-      "Real-time analytics dashboard",
-      "HIPAA compliant security"
-    ],
-    "client": "Regional Healthcare Provider",
-    "year": "2023",
-    "gallery": [
-      "https://picsum.photos/id/1021/1200/800",
-      "https://picsum.photos/id/1022/1200/800",
-      "https://picsum.photos/id/1023/1200/800"
-    ]
-  },
-  {
-    "id": "fintech-app",
-    "title": "FinTech Mobile Application",
-    "description": "Secure mobile banking solution with biometric authentication, serving over 100K active users daily.",
-    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200",
-    "logo": "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=200",
-    "previewUrl": "https://example.com/fintech",
-    "metrics": [
-      { "value": "100K+", "label": "Daily Users" },
-      { "value": "4.8★", "label": "App Store Rating" },
-      { "value": "24/7", "label": "Availability" }
-    ],
-    "technologies": ["React Native", "TypeScript", "Firebase", "GraphQL"],
-    "features": [
-      "Biometric authentication",
-      "Instant money transfer",
-      "Spending analytics",
-      "Multi-currency wallet"
-    ],
-    "client": "Digital Bank Startup",
-    "year": "2024",
-    "gallery": [
-      "https://picsum.photos/id/1031/1200/800",
-      "https://picsum.photos/id/1032/1200/800",
-      "https://picsum.photos/id/1033/1200/800"
-    ]
-  },
-  {
-    "id": "ai-analytics",
-    "title": "AI-Powered Analytics Platform",
-    "description": "Machine learning platform that processes millions of data points to provide actionable business insights.",
-    "image": "https://images.unsplash.com/photo-1556767576-5ec41e3239e4?w=1200",
-    "logo": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200",
-    "previewUrl": "https://example.com/ai-analytics",
-    "metrics": [
-      { "value": "85%", "label": "Prediction Accuracy" },
-      { "value": "10M+", "label": "Data Points/Day" },
-      { "value": "50+", "label": "Clients" }
-    ],
-    "technologies": ["Python", "TensorFlow", "Kubernetes", "AWS"],
-    "features": [
-      "Automated data processing",
-      "Predictive analytics",
-      "Customizable dashboards",
-      "Scalable cloud architecture"
-    ],
-    "client": "Global Enterprises",
+    "client": "Personal Project",
     "year": "2025",
     "gallery": [
-      "https://picsum.photos/id/1041/1200/800",
-      "https://picsum.photos/id/1042/1200/800",
-      "https://picsum.photos/id/1043/1200/800"
+      "/images/ai-portfolio-02.png",
+      "/images/ai-portfolio-03.png",
+      "/images/ai-portfolio-04.png"
+    ]
+  },
+  {
+    "id": "chatnex",
+    "title": "ChatNex",
+    "description": "A versatile AI platform where users can add text, files, API data, web-scraped content, and Q&A data to train models. The integrated chatbot provides intelligent responses based on the uploaded data.",
+    "image": "/images/chatnex-04.png",
+    "logo": "/images/chatnex-logo.png",
+    "previewUrl": "https://chatnex.takiuddin.me/",
+    "metrics": [
+      { "value": "5+", "label": "Data Input Types Supported" },
+      { "value": "Real-time", "label": "Model Update Frequency" },
+      { "value": "100%", "label": "Custom Dataset Integration" }
+    ],
+    "technologies": [
+      "React.js",
+      "TailwindCSS",
+      "Shadcn UI",
+      "Node.js",
+      "Express.js",
+      "Gemini API",
+      "Langchain",
+      "Puppeteer",
+      "PgVector",
+      "PostgreSQL",
+      "Prisma ORM"
+    ],
+    "features": [
+      "Upload and manage text, files, and API data",
+      "Train custom AI models with user-provided datasets",
+      "Interactive chatbot that answers based on uploaded data",
+      "Support for Q&A datasets and web-scraped content"
+    ],
+    "client": "Personal/Private Project",
+    "year": "2025",
+    "gallery": [
+      "/images/chatnex-02.png",
+      "/images/chatnex-03.png",
+      "/images/chatnex-01.png"
+    ]
+  },
+  {
+    "id": "ai-web-crawler",
+    "title": "AI-Web-Crawler",
+    "description": "A smart web crawler platform where users can provide any website link, preview it, select desired data types (text, HTML, custom), modify data using prompts, and save or download it in multiple formats.",
+    "image": "/images/ai-web-crawler-01.png",
+    "logo": "/images/ai-web-crawler-logo.png",
+    "previewUrl": "https://ai-web-crawler.minimatic.solutions/",
+    "metrics": [
+      { "value": "Any URL", "label": "Supported Websites" },
+      { "value": "3+", "label": "Data Output Formats" },
+      { "value": "100%", "label": "User-Controlled Data Selection" }
+    ],
+    "technologies": [
+      "React.js",
+      "TailwindCSS",
+      "Shadcn UI",
+      "Node.js",
+      "Express.js",
+      "Gemini API",
+      "Langchain",
+      "Puppeteer",
+      "PgVector",
+      "PostgreSQL",
+      "Prisma ORM"
+    ],
+    "features": [
+      "Website preview before scraping",
+      "User selects text, HTML, or custom data",
+      "Modify scraped data via prompts",
+      "Save data and download in PDF, Excel, or Text formats"
+    ],
+    "client": "Personal/Private Project",
+    "year": "2025",
+    "gallery": [
+      "/images/ai-web-crawler-01.png",
+      "/images/ai-web-crawler-02.png",
+      "/images/ai-web-crawler-03.png",
+      "/images/ai-web-crawler-04.png",
+      "/images/ai-web-crawler-05.png"
     ]
   }
 ]

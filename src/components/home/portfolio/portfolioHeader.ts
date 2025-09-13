@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const PortfolioHeader = () => html` <div
-  class="text-center max-w-4xl mx-auto mb-16"
+  class="text-center max-w-4xl mx-auto mb-16 scroll-reveal"
 >
   <h1 class="text-4xl lg:text-6xl font-bold text-foreground mb-6">
     Our Projects

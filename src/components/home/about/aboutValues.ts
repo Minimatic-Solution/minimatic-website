@@ -1,14 +1,14 @@
 import { html } from "hono/html";
 
 const AboutValues = () => html`
-  <section class="mb-20 fade-in stagger-4">
+  <section class="mb-20 fade-in stagger-4 ">
     <h2
       class="text-4xl lg:text-5xl font-bold font-serif text-center mb-16 text-gray-800"
     >
       Our Core Values
     </h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-8 scroll-reveal">
       <!-- Innovation Value -->
       <article
         class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 card-hover group"

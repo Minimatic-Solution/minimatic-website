@@ -2,7 +2,9 @@ import { html } from "hono/html";
 
 const DevelopmentProcess = () => html`
   <!-- Process Section -->
-  <div class="bg-background rounded-2xl p-8 lg:p-12 border border-border">
+  <div
+    class="scroll-reveal bg-background rounded-2xl p-8 lg:p-12 border border-border"
+  >
     <div class="text-center mb-12">
       <h3 class="text-2xl lg:text-3xl font-bold text-foreground mb-4">
         Our Development Process

@@ -3,7 +3,7 @@ import { html } from "hono/html";
 const AboutMission = () => html`
   <section class="text-center mb-20 fade-in stagger-3">
     <div
-      class="max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-8 lg:p-12 rounded-3xl border border-gray-200 shadow-lg"
+      class="scroll-reveal max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-8 lg:p-12 rounded-3xl border border-gray-200 shadow-lg"
     >
       <div
         class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"
