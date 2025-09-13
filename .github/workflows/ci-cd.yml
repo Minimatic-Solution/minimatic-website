@@ -9,9 +9,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   dockerize-and-deploy:
@@ -36,7 +33,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ env.DOCKER_IMAGE_URL }}:latest -f Dockerfile.prod .
+          docker build -t ${{ env.DOCKER_IMAGE_URL }}:latest .
           docker push ${{ env.DOCKER_IMAGE_URL }}:latest
 
       - name: Deploy to Cloud Run
