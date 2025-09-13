@@ -11,24 +11,24 @@ const ProjectDetails = (id: string) => {
   return html`
     <section class="pb-16">
       <!-- Hero Section -->
-      ${ProjectDetailsHeader(
-        project.image,
-        project.title,
-        project.logo,
-        project.description,
-        project.previewUrl
-      )}
+      ${ProjectDetailsHeader({
+        image: project.image,
+        title: project.title,
+        logo: project.logo,
+        description: project.description,
+        previewUrl: project.previewUrl,
+      })}
 
       <!-- Project Details Info -->
-      ${ProjectDetailsInfo(
-        project.client,
-        project.year,
-        project.metrics,
-        project.features,
-        project.technologies,
-        project.gallery,
-        project.title
-      )}
+      ${ProjectDetailsInfo({
+        client: project.client,
+        year: project.year,
+        metrics: project.metrics,
+        features: project.features,
+        technologies: project.technologies,
+        gallery: project.gallery,
+        title: project.title,
+      })}
     </section>
   `;
 };

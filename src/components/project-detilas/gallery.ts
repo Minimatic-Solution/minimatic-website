@@ -1,6 +1,11 @@
 import { html } from "hono/html";
 
-const Gallery = (gallery, title) => html`
+interface GalleryProps {
+  gallery: string[];
+  title: string;
+}
+
+const Gallery = ({ gallery, title }: GalleryProps) => html`
   <div>
     <h2 class="text-2xl font-semibold mb-6 text-center">
       📸 Project Screenshots

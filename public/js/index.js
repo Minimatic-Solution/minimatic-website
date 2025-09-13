@@ -1,5 +1,6 @@
 import { initAbout } from "./about.js";
 import { initAiExcellence } from "./ai-excellence.js";
+import { initChat } from "./chat.js";
 import { initContact } from "./contact.js";
 import { initGallery } from "./gallery.js";
 import { initNavbar } from "./navbar.js";
@@ -13,3 +14,4 @@ initAbout();
 initContact();
 initAiExcellence();
 initGallery();
+initChat();
