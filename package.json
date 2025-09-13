@@ -2,6 +2,7 @@
   "name": "minimatic-solutions",
   "type": "module",
   "scripts": {
+    "dev:node": "tsx src/server.ts",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
@@ -9,11 +10,14 @@
     "watch:css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
   },
   "dependencies": {
+    "@hono/node-server": "^1.19.2",
     "@tailwindcss/cli": "^4.1.13",
     "hono": "^4.9.6",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "tsx": "^4.20.5"
   },
   "devDependencies": {
+    "typescript": "^5.9.2",
     "wrangler": "^4.4.0"
   }
 }
