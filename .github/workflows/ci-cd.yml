@@ -3,7 +3,7 @@ name: Deploy to Cloud Run
 env:
   SERVICE_NAME: minimatic-website
   PROJECT_ID: radiant-voyage-464621-j1
-  DOCKER_IMAGE_URL: asia-southeast1-docker.pkg.dev/radiant-voyage-464621-j1/minimatic-website
+  DOCKER_IMAGE_URL: asia-southeast1-docker.pkg.dev/radiant-voyage-464621-j1/minimatic-website/minimatic-app
 
 on:
   push:
