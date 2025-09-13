@@ -1,12 +1,22 @@
 import { html } from "hono/html";
 
-const ProjectDetailsHeader = (
+interface ProjectDetailsHeaderProps {
+  image: string;
+  title: string;
+  logo: string;
+  description: string;
+  previewUrl: string;
+}
+
+const ProjectDetailsHeader = ({
   image,
   title,
   logo,
   description,
-  previewUrl
-) => html` <div class="relative h-[400px] lg:h-[500px] overflow-hidden">
+  previewUrl,
+}: ProjectDetailsHeaderProps) => html` <div
+  class="relative h-[400px] lg:h-[500px] overflow-hidden"
+>
   <img
     src="${image}"
     alt="${title}"

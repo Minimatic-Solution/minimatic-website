@@ -1,15 +1,30 @@
 import { html } from "hono/html";
 import Gallery from "./gallery";
 
-const ProjectDetailsInfo = (
+interface ProjectDetailsInfoProps {
+  client: string;
+  year: string;
+  metrics: Array<{
+    label: string;
+    value: string;
+  }>;
+  features: string[];
+  technologies: string[];
+  gallery: string[];
+  title: string;
+}
+
+const ProjectDetailsInfo = ({
   client,
   year,
   metrics,
   features,
   technologies,
   gallery,
-  title
-) => html` <div class="container mx-auto px-4 pt-12 space-y-12">
+  title,
+}: ProjectDetailsInfoProps) => html` <div
+  class="container mx-auto px-4 pt-12 space-y-12"
+>
   <!-- Project Info -->
   <div class="text-center">
     <p class="text-muted-foreground">
@@ -58,7 +73,7 @@ const ProjectDetailsInfo = (
   </div>
 
   <!-- Gallery Section -->
-  ${Gallery(gallery, title)}
+  ${Gallery({ gallery, title })}
 </div>`;
 
 export default ProjectDetailsInfo;
