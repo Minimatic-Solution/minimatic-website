@@ -34,7 +34,6 @@ const AboutWhoWeAre = () => html`
 
       <!-- Key Statistics -->
       <div class="grid grid-cols-2 gap-4" aria-label="Company statistics">
-        >
         <div
           class="bg-white/70 backdrop-blur-sm p-4 rounded-xl border border-gray-200"
         >
