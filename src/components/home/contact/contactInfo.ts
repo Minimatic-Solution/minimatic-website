@@ -207,7 +207,7 @@ const ContactInfo = () => html`
 
         <!-- LinkedIn -->
         <a
-          href="https://www.linkedin.com/in/takiuddin-ahmed-871607b5/"
+          href="https://www.linkedin.com/company/minimatic-solutions/"
           class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center hover:scale-110 transition-transform"
           aria-label="Connect with us on LinkedIn"
           target="_blank"
