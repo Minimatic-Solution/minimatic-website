@@ -4,7 +4,7 @@ import AiExcellenceImpact from "./aiExcellenceImpact";
 import AiExcellenceMetrics from "./aiExcellenceMetrics";
 
 const AiExcellence = () => html`
-  <main
+  <section
     id="ai-excellence"
     class="py-20 lg:py-32 section-bg min-h-screen"
     role="main"
@@ -13,7 +13,7 @@ const AiExcellence = () => html`
     <div class="container mx-auto px-6">
       ${AiExcellenceHeader()} ${AiExcellenceMetrics()} ${AiExcellenceImpact()}
     </div>
-  </main>
+  </section>
 `;
 
 export default AiExcellence;
