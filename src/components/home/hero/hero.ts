@@ -72,7 +72,7 @@ const Hero = () => html`
             <div class="flex items-center gap-6 opacity-80">
               <!-- Email -->
               <a
-                href="mailto:hello@example.com"
+                href="mailto:contact@minimatic.solutions"
                 class="hover:text-accent"
                 aria-label="Email Minimatic Solutions"
               >

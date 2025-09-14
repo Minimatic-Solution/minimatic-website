@@ -128,12 +128,12 @@ const Footer = () => html`
               </li>
               <li role="listitem">
                 <a
-                  href="mailto:info@minimatic.com"
+                  href="mailto:contact@minimatic.solutions"
                   class="flex items-center hover:text-accent transition-colors"
-                  aria-label="Email us at info@minimatic.com"
+                  aria-label="Email us at contact@minimatic.solutions"
                 >
                   <span aria-hidden="true">✉️</span>
-                  <span class="ml-2">info@minimatic.com</span>
+                  <span class="ml-2">contact@minimatic.solutions</span>
                 </a>
               </li>
               <li

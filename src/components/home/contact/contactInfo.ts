@@ -45,18 +45,18 @@ const ContactInfo = () => html`
             <h3 class="font-semibold text-gray-800 mb-1">Email Us</h3>
             <p class="text-gray-600">
               <a
-                href="mailto:hello@minimaticsolutions.com"
+                href="mailto:contact@minimatic.solutions"
                 class="hover:text-blue-600 transition-colors"
-                aria-label="Send email to hello@minimaticsolutions.com"
-                >hello@minimaticsolutions.com</a
+                aria-label="Send email to contact@minimatic.solutions"
+                >contact@minimatic.solutions</a
               >
             </p>
             <p class="text-gray-600">
               <a
-                href="mailto:support@minimaticsolutions.com"
+                href="mailto:support@minimatic.solutions"
                 class="hover:text-blue-600 transition-colors"
-                aria-label="Send email to support@minimaticsolutions.com"
-                >support@minimaticsolutions.com</a
+                aria-label="Send email to support@minimatic.solutions"
+                >support@minimatic.solutions</a
               >
             </p>
           </div>
@@ -187,7 +187,7 @@ const ContactInfo = () => html`
       <nav class="flex space-x-4" aria-label="Social media links">
         <!-- Twitter -->
         <a
-          href="https://x.com/shahinali_dev"
+          href="#"
           class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform"
           aria-label="Follow us on Twitter"
           target="_blank"
