@@ -159,3 +159,5 @@ const AiExcellenceImpact = () => html`
     </div>
   </section>
 `;
+
+export default AiExcellenceImpact;

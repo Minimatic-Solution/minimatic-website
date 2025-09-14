@@ -45,3 +45,5 @@ const AiExcellenceHeader = () => html`
     </p>
   </header>
 `;
+
+export default AiExcellenceHeader;

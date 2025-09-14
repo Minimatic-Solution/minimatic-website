@@ -211,3 +211,5 @@ const AiExcellenceMetrics = () => html`
     </article>
   </section>
 `;
+
+export default AiExcellenceMetrics;
