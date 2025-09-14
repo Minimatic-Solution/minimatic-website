@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const AboutCTA = () => html`
-  <section class="text-center fade-in">
+  <section class="text-center fade-in" aria-labelledby="cta-heading">
     <div
       class="bg-gradient-to-r from-blue-600 to-purple-600 p-1 rounded-3xl max-w-4xl mx-auto scroll-reveal"
     >
@@ -18,6 +18,7 @@ const AboutCTA = () => html`
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://calendly.com/takiuddinahmed-ciyp"
+            target="_blank"
             class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             aria-label="Schedule a consultation with us"
           >

@@ -22,6 +22,14 @@ export function initChat() {
     return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   }
 
+  // Configure marked options
+  marked.setOptions({
+    gfm: true,
+    breaks: true,
+    smartLists: true,
+    smartypants: true,
+  });
+
   // Open chat
   function openChat() {
     if (isChatOpen) return;
@@ -48,28 +56,28 @@ export function initChat() {
     if (isUser) {
       messageDiv.classList.add("justify-end");
       messageDiv.innerHTML = `
-        <div class="bg-accent text-accent-foreground p-3 rounded-lg rounded-tr-none max-w-xs">
-          <p class="text-sm">${message}</p>
-          <span class="text-xs opacity-70 mt-1 block">${timeString}</span>
-        </div>
-        <div class="bg-accent/20 p-2 rounded-full h-fit">
-          <svg class="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-          </svg>
-        </div>
-      `;
+          <div class="bg-accent text-accent-foreground p-3 rounded-lg rounded-tr-none max-w-xs" role="status" aria-label="Your message">
+            <p class="text-sm">${message}</p>
+            <span class="text-xs opacity-70 mt-1 block">${timeString}</span>
+          </div>
+          <div class="bg-accent/20 p-2 rounded-full h-fit" aria-hidden="true">
+            <svg class="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+        `;
     } else {
       messageDiv.innerHTML = `
-        <div class="bg-accent p-2 rounded-full h-fit">
-          <svg class="h-4 w-4 text-accent-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-          </svg>
-        </div>
-        <div class="bg-muted p-3 rounded-lg rounded-tl-none max-w-xs">
-          <p class="text-sm text-card-foreground">${message}</p>
-          <span class="text-xs text-muted-foreground mt-1 block">${timeString}</span>
-        </div>
-      `;
+          <div class="bg-accent p-2 rounded-full h-fit" aria-hidden="true">
+            <svg class="h-4 w-4 text-accent-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <div class="bg-muted p-3 rounded-lg rounded-tl-none max-w-xs" role="status" aria-label="Assistant message">
+            <p class="text-sm text-card-foreground">${marked.parse(message)}</p>
+            <span class="text-xs text-muted-foreground mt-1 block">${timeString}</span>
+          </div>
+        `;
     }
 
     chatMessages.appendChild(messageDiv);
@@ -82,19 +90,20 @@ export function initChat() {
     typingDiv.className = "flex gap-3";
     typingDiv.id = "typing-indicator";
     typingDiv.innerHTML = `
-      <div class="bg-accent p-2 rounded-full h-fit">
-        <svg class="h-4 w-4 text-accent-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-        </svg>
-      </div>
-      <div class="bg-muted p-3 rounded-lg rounded-tl-none">
-        <div class="flex space-x-1">
-          <div class="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
-          <div class="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
-          <div class="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+        <div class="bg-accent p-2 rounded-full h-fit" aria-hidden="true">
+          <svg class="h-4 w-4 text-accent-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
         </div>
-      </div>
-    `;
+        <div class="bg-muted p-3 rounded-lg rounded-tl-none" role="status" aria-live="polite" aria-label="Assistant is typing">
+          <div class="flex space-x-1">
+            <div class="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
+            <div class="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+            <div class="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+          </div>
+        </div>
+      `;
+
     chatMessages.appendChild(typingDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }

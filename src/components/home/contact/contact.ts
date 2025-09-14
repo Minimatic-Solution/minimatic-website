@@ -4,7 +4,12 @@ import ContactHeader from "./contactHeader";
 import ContactInfo from "./contactInfo";
 
 const Contact = () => html`
-  <section id="contact" class="relative py-20 lg:py-32 overflow-hidden">
+  <section
+    id="contact"
+    class="relative py-20 lg:py-32 overflow-hidden"
+    role="main"
+    aria-labelledby="contact-title"
+  >
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-mesh" aria-hidden="true"></div>
     <div
@@ -26,4 +31,5 @@ const Contact = () => html`
     </div>
   </section>
 `;
+
 export default Contact;

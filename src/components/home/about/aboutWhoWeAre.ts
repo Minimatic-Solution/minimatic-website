@@ -1,12 +1,19 @@
 import { html } from "hono/html";
 
 const AboutWhoWeAre = () => html`
-  <section class="scroll-reveal grid lg:grid-cols-2 gap-16 items-center mb-20">
+  <section
+    class="scroll-reveal grid lg:grid-cols-2 gap-16 items-center mb-20"
+    aria-labelledby="who-we-are-heading"
+  >
     <!-- Left Content -->
-    <article class="space-y-8 fade-in stagger-1">
+    <article
+      class="space-y-8 fade-in stagger-1"
+      aria-labelledby="who-we-are-heading"
+    >
       <div>
         <h2
           class="text-4xl lg:text-5xl font-bold font-serif mb-6 text-gray-800"
+          id="who-we-are-heading"
         >
           Who We Are
         </h2>
@@ -26,7 +33,7 @@ const AboutWhoWeAre = () => html`
       </div>
 
       <!-- Key Statistics -->
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 gap-4" aria-label="Company statistics">
         <div
           class="bg-white/70 backdrop-blur-sm p-4 rounded-xl border border-gray-200"
         >
@@ -58,7 +65,7 @@ const AboutWhoWeAre = () => html`
     <aside class="relative fade-in stagger-2">
       <figure class="relative overflow-hidden rounded-3xl">
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+          src="/images/about.jpeg"
           alt="Team collaboration at Minimatic Solutions"
           class="w-full h-96 object-cover"
         />

@@ -1,14 +1,17 @@
 import { html } from "hono/html";
-import Footer from "../components/footer/footer";
-import Navbar from "../components/navbar/Navbbar";
 
-const RootLayout = (props: { title: string; children: any }) => html`
+interface Props {
+  title?: string;
+  children: any;
+}
+
+const BasicLayout = ({ title = "Minimatic Website", children }: Props) => html`
   <!DOCTYPE html>
   <html lang="en">
     <head>
       <title>
-        ${props.title} - Minimatic Solutions | Leading Software Development
-        Company | Web Development, AI Solutions, Digital Transformation
+        ${title} - Minimatic Solutions | Leading Software Development Company |
+        Web Development, AI Solutions, Digital Transformation
       </title>
 
       <!-- Meta -->
@@ -413,21 +416,10 @@ const RootLayout = (props: { title: string; children: any }) => html`
       <!-- Styles -->
       <link href="/css/output.css" rel="stylesheet" />
     </head>
-    <body class="font-sans min-h-screen bg-background text-gray-900">
-      <header
-        class="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border"
-      >
-        ${Navbar()}
-      </header>
-
-      <main id="main-content" class="min-h-[70vh]">${props.children}</main>
-
-      ${Footer()}
-
-      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-      <script src="/js/index.js" type="module"></script>
+    <body class="antialiased bg-white text-gray-900">
+      ${children}
     </body>
   </html>
 `;
 
-export default RootLayout;
+export default BasicLayout;

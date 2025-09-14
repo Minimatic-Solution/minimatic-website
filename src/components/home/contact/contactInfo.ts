@@ -1,12 +1,20 @@
 import { html } from "hono/html";
 
 const ContactInfo = () => html`
-  <aside class="space-y-8 fade-in stagger-2 scroll-reveal">
+  <aside
+    class="space-y-8 fade-in stagger-2 scroll-reveal"
+    role="complementary"
+    aria-labelledby="contact-info-title"
+  >
     <!-- Quick Contact Info -->
     <section
       class="contact-card p-8 rounded-3xl border border-gray-200 shadow-xl"
+      aria-labelledby="contact-info-title"
     >
-      <h2 class="text-3xl font-bold font-serif mb-6 text-gray-800">
+      <h2
+        id="contact-info-title"
+        class="text-3xl font-bold font-serif mb-6 text-gray-800"
+      >
         Get in Touch
       </h2>
 
@@ -23,6 +31,7 @@ const ContactInfo = () => html`
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -36,16 +45,18 @@ const ContactInfo = () => html`
             <h3 class="font-semibold text-gray-800 mb-1">Email Us</h3>
             <p class="text-gray-600">
               <a
-                href="mailto:hello@minimaticsolutions.com"
+                href="mailto:contact@minimatic.solutions"
                 class="hover:text-blue-600 transition-colors"
-                >hello@minimaticsolutions.com</a
+                aria-label="Send email to contact@minimatic.solutions"
+                >contact@minimatic.solutions</a
               >
             </p>
             <p class="text-gray-600">
               <a
-                href="mailto:support@minimaticsolutions.com"
+                href="mailto:support@minimatic.solutions"
                 class="hover:text-blue-600 transition-colors"
-                >support@minimaticsolutions.com</a
+                aria-label="Send email to support@minimatic.solutions"
+                >support@minimatic.solutions</a
               >
             </p>
           </div>
@@ -62,6 +73,7 @@ const ContactInfo = () => html`
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -77,6 +89,7 @@ const ContactInfo = () => html`
               <a
                 href="tel:+8801723100925"
                 class="hover:text-green-600 transition-colors"
+                aria-label="Call us at +880 1723-100925"
                 >+880 1723-100925</a
               >
             </p>
@@ -94,6 +107,7 @@ const ContactInfo = () => html`
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -111,11 +125,16 @@ const ContactInfo = () => html`
           </div>
           <div>
             <h3 class="font-semibold text-gray-800 mb-1">Visit Us</h3>
-            <p class="text-gray-600">
-              Padma Garden<br />
-              Road No 3<br />
-              Padma Abasahik, Rajshahi
-            </p>
+            <div
+              class="text-gray-600"
+              itemscope
+              itemtype="https://schema.org/PostalAddress"
+            >
+              <span itemprop="streetAddress"
+                >Padma Garden<br />Road No 3<br />Padma Abasahik</span
+              >,
+              <span itemprop="addressLocality">Rajshahi</span>
+            </div>
           </div>
         </div>
       </address>
@@ -124,6 +143,7 @@ const ContactInfo = () => html`
     <!-- Response Time -->
     <section
       class="contact-card p-6 rounded-2xl border border-gray-200 shadow-xl"
+      aria-labelledby="response-time-title"
     >
       <div class="flex items-center space-x-4">
         <div
@@ -135,6 +155,7 @@ const ContactInfo = () => html`
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               stroke-linecap="round"
@@ -145,7 +166,9 @@ const ContactInfo = () => html`
           </svg>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-gray-800">Quick Response</h3>
+          <h3 id="response-time-title" class="text-xl font-bold text-gray-800">
+            Quick Response
+          </h3>
           <p class="text-gray-600">
             We typically respond within 2-4 hours during business days
           </p>
@@ -156,12 +179,15 @@ const ContactInfo = () => html`
     <!-- Social Links -->
     <section
       class="contact-card p-6 rounded-2xl border border-gray-200 shadow-xl"
+      aria-labelledby="social-links-title"
     >
-      <h3 class="text-xl font-bold text-gray-800 mb-4">Connect With Us</h3>
-      <nav class="flex space-x-4">
+      <h3 id="social-links-title" class="text-xl font-bold text-gray-800 mb-4">
+        Connect With Us
+      </h3>
+      <nav class="flex space-x-4" aria-label="Social media links">
         <!-- Twitter -->
         <a
-          href="https://x.com/shahinali_dev"
+          href="#"
           class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform"
           aria-label="Follow us on Twitter"
           target="_blank"
@@ -181,7 +207,7 @@ const ContactInfo = () => html`
 
         <!-- LinkedIn -->
         <a
-          href="https://www.linkedin.com/in/takiuddin-ahmed-871607b5/"
+          href="https://www.linkedin.com/company/minimatic-solutions/"
           class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center hover:scale-110 transition-transform"
           aria-label="Connect with us on LinkedIn"
           target="_blank"
