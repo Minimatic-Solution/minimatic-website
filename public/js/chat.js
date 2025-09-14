@@ -22,6 +22,14 @@ export function initChat() {
     return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   }
 
+  // Configure marked options
+  marked.setOptions({
+    gfm: true,
+    breaks: true,
+    smartLists: true,
+    smartypants: true,
+  });
+
   // Open chat
   function openChat() {
     if (isChatOpen) return;
@@ -66,7 +74,7 @@ export function initChat() {
           </svg>
         </div>
         <div class="bg-muted p-3 rounded-lg rounded-tl-none max-w-xs">
-          <p class="text-sm text-card-foreground">${message}</p>
+          <p class="text-sm text-card-foreground">${marked.parse(message)}</p>
           <span class="text-xs text-muted-foreground mt-1 block">${timeString}</span>
         </div>
       `;

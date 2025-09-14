@@ -16,6 +16,7 @@ const RootLayout = (props: { title: string; children: any }) => html`
       <main class="">${props.children}</main>
     </body>
     ${Footer()}
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="/js/index.js" type="module"></script>
   </html>
 `;
