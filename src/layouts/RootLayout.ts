@@ -80,8 +80,6 @@ const RootLayout = (props: { title: string; children: any }) => html`
         property="twitter:image:alt"
         content="Minimatic Solutions - Software Development Company"
       />
-      <meta property="twitter:creator" content="@shahinali_dev" />
-      <meta property="twitter:site" content="@minimatic_solutions" />
 
       <!-- Additional Meta Tags -->
       <meta name="theme-color" content="#3B82F6" />
@@ -94,9 +92,10 @@ const RootLayout = (props: { title: string; children: any }) => html`
       <!-- Business Verification -->
       <meta
         name="google-site-verification"
-        content="YOUR_GOOGLE_VERIFICATION_CODE"
+        content="rk2vFBEpXh4mYSI0d8YI6RvNB3t2TMWkI6WOznUNCa8"
       />
-      <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
+
+      <meta name="msvalidate.01" content="8541538B77CCF1439409EE470B76E1A6" />
 
       <!-- Geo Location -->
       <meta name="geo.region" content="BD-54" />
@@ -141,7 +140,7 @@ const RootLayout = (props: { title: string; children: any }) => html`
             },
             {
               "@type": "ContactPoint",
-              "email": "hello@minimatic.solutions",
+              "email": "contact@minimatic.solutions",
               "contactType": "customer service",
               "availableLanguage": ["English", "Bengali"]
             },
@@ -287,7 +286,7 @@ const RootLayout = (props: { title: string; children: any }) => html`
           ],
           "url": "https://minimatic.solutions",
           "telephone": "+8801723100925",
-          "email": "hello@minimatic.solutions"
+          "email": "contact@minimatic.solutions"
         }
       </script>
 
@@ -314,10 +313,9 @@ const RootLayout = (props: { title: string; children: any }) => html`
           },
           "url": "https://minimatic.solutions",
           "telephone": "+8801723100925",
-          "email": "hello@minimatic.solutions",
+          "email": "contact@minimatic.solutions",
           "openingHours": "Mo-Fr 09:00-18:00",
           "sameAs": [
-            "https://x.com/shahinali_dev",
             "https://www.linkedin.com/company/minimatic-solutions/",
             "https://github.com/Minimatic-Solution"
           ]
@@ -340,19 +338,24 @@ const RootLayout = (props: { title: string; children: any }) => html`
               "@type": "ListItem",
               "position": 2,
               "name": "Services",
-              "item": "https://minimatic.solutions/services"
+              "item": "https://minimatic.solutions/#services"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "About",
-              "item": "https://minimatic.solutions/about"
+              "item": "https://minimatic.solutions/#about"
             },
             {
               "@type": "ListItem",
               "position": 4,
               "name": "Contact",
-              "item": "https://minimatic.solutions/contact"
+              "item": "https://minimatic.solutions/#contact"
+            }{
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Portfolio",
+              "item": "https://minimatic.solutions/#portfolio"
             }
           ]
         }
