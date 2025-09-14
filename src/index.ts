@@ -9,7 +9,7 @@ const app = new Hono();
 app.get("/", (c) => {
   return c.html(
     RootLayout({
-      title: "Minimatic Solutions",
+      title: "Home",
       children: Home(),
     })
   );
@@ -19,7 +19,7 @@ app.get("/projects/:id", (c) => {
   const id = c.req.param("id");
   return c.html(
     RootLayout({
-      title: "Project Details | Minimatic Solutions",
+      title: "Project Details",
       children: ProjectDetails(id),
     })
   );
@@ -28,7 +28,7 @@ app.get("/projects/:id", (c) => {
 app.get("/privacy-policy", (c) => {
   return c.html(
     RootLayout({
-      title: "Privacy Policy | Minimatic Solutions",
+      title: "Privacy Policy",
       children: PrivacyPolicy(),
     })
   );

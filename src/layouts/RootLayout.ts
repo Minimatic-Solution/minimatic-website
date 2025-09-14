@@ -7,8 +7,8 @@ const RootLayout = (props: { title: string; children: any }) => html`
   <html lang="en">
     <head>
       <title>
-        Minimatic Solutions - Leading Software Development Company | Web
-        Development, AI Solutions, Digital Transformation
+        ${props.title} - Minimatic Solutions | Leading Software Development
+        Company | Web Development, AI Solutions, Digital Transformation
       </title>
 
       <!-- Meta -->
