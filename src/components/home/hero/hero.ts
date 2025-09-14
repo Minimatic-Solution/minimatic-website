@@ -3,28 +3,41 @@ import ChatSidebar from "./chatSidebar";
 
 const Hero = () => html`
   <!-- Hero Section -->
-  <section class="relative overflow-hidden">
+  <section
+    id="hero"
+    class="relative overflow-hidden"
+    aria-labelledby="hero-heading"
+  >
     <div class="container mx-auto px-4 py-16 lg:py-24">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
         <div class="space-y-8">
-          <div class="space-y-4">
+          <header class="space-y-4">
             <h1
+              id="hero-heading"
               class="text-4xl lg:text-6xl font-bold text-foreground leading-tight"
             >
               Innovative Software Solutions for a
               <span class="text-accent">Digital Future</span>
             </h1>
-            <p class="text-lg lg:text-xl text-muted-foreground leading-relaxed">
+            <p
+              class="text-lg lg:text-xl text-muted-foreground leading-relaxed"
+              aria-label="Company mission statement"
+            >
               Transforming ideas into impactful software with cutting-edge
               technology. We build scalable, secure, and user-centric
               applications that drive business growth.
             </p>
-          </div>
+          </header>
 
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <button
+          <nav
+            aria-label="Primary actions"
+            class="flex flex-col sm:flex-row gap-4"
+          >
+            <a
+              href="#contact"
+              role="button"
               class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground transition transform active:scale-95 schedule-call-btn"
             >
               Schedule a Call
@@ -33,6 +46,7 @@ const Hero = () => html`
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -41,29 +55,34 @@ const Hero = () => html`
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </button>
+            </a>
             <a
-              class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg border border-border hover:bg-muted bg-transparent transition transform active:scale-95"
               href="#contact"
+              class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg border border-border hover:bg-muted bg-transparent transition transform active:scale-95"
             >
               Get in Touch
             </a>
-          </div>
+          </nav>
 
           <!-- Connect with us -->
-          <div class="space-y-4">
+          <aside class="space-y-4" aria-label="Social media links">
             <p class="text-sm text-muted-foreground font-medium">
               Connect with us
             </p>
             <div class="flex items-center gap-6 opacity-80">
               <!-- Email -->
-              <a href="mailto:hello@example.com" class="hover:text-accent">
+              <a
+                href="mailto:hello@example.com"
+                class="hover:text-accent"
+                aria-label="Email Minimatic Solutions"
+              >
                 <svg
                   class="h-6 w-6"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     stroke-linecap="round"
@@ -77,12 +96,15 @@ const Hero = () => html`
               <a
                 href="https://www.linkedin.com/company/minimatic-solutions/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="hover:text-accent"
+                aria-label="Visit Minimatic Solutions on LinkedIn"
               >
                 <svg
                   class="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     d="M19 0h-14c-2.77 0-5 2.23-5 
@@ -103,12 +125,15 @@ const Hero = () => html`
               <a
                 href="https://github.com/Minimatic-Solution"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="hover:text-accent"
+                aria-label="Visit Minimatic Solutions on GitHub"
               >
                 <svg
                   class="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     d="M12 0C5.37 0 0 5.37 0 12c0 
@@ -131,17 +156,18 @@ const Hero = () => html`
                 </svg>
               </a>
             </div>
-          </div>
-
+          </aside>
         </div>
 
         <!-- Right Content - Feature Cards -->
         <div class="relative">
-          <div class="grid grid-cols-1 gap-6">
+          <section aria-label="Key features" class="grid grid-cols-1 gap-6">
             <!-- Main Feature Card -->
-            <div class="bg-card border border-border rounded-lg p-6 shadow-sm">
+            <article
+              class="bg-card border border-border rounded-lg p-6 shadow-sm"
+            >
               <div class="flex items-start gap-4">
-                <div class="bg-accent/10 p-3 rounded-lg">
+                <div class="bg-accent/10 p-3 rounded-lg" aria-hidden="true">
                   <svg
                     class="h-6 w-6 text-accent"
                     fill="none"
@@ -166,13 +192,16 @@ const Hero = () => html`
                   </p>
                 </div>
               </div>
-            </div>
+            </article>
 
             <!-- Secondary Feature Cards -->
             <div class="grid grid-cols-2 gap-4">
-              <div class="bg-card border border-border rounded-lg p-4">
+              <article class="bg-card border border-border rounded-lg p-4">
                 <div class="space-y-3">
-                  <div class="bg-accent/10 p-2 rounded-lg w-fit">
+                  <div
+                    class="bg-accent/10 p-2 rounded-lg w-fit"
+                    aria-hidden="true"
+                  >
                     <svg
                       class="h-5 w-5 text-accent"
                       fill="none"
@@ -196,11 +225,14 @@ const Hero = () => html`
                     </p>
                   </div>
                 </div>
-              </div>
+              </article>
 
-              <div class="bg-card border border-border rounded-lg p-4">
+              <article class="bg-card border border-border rounded-lg p-4">
                 <div class="space-y-3">
-                  <div class="bg-accent/10 p-2 rounded-lg w-fit">
+                  <div
+                    class="bg-accent/10 p-2 rounded-lg w-fit"
+                    aria-hidden="true"
+                  >
                     <svg
                       class="h-5 w-5 text-accent"
                       fill="none"
@@ -224,11 +256,14 @@ const Hero = () => html`
                     </p>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
 
             <!-- Stats Card -->
-            <div class="bg-accent/5 border border-accent/20 rounded-lg p-6">
+            <aside
+              class="bg-accent/5 border border-accent/20 rounded-lg p-6"
+              aria-label="Company statistics"
+            >
               <div class="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div class="text-2xl font-bold text-accent">500+</div>
@@ -243,22 +278,24 @@ const Hero = () => html`
                   <div class="text-xs text-muted-foreground">Support</div>
                 </div>
               </div>
-            </div>
-          </div>
+            </aside>
+          </section>
 
           <!-- Background Decoration -->
           <div
             class="absolute -top-4 -right-4 w-24 h-24 bg-accent/10 rounded-full blur-xl"
+            aria-hidden="true"
           ></div>
           <div
             class="absolute -bottom-8 -left-8 w-32 h-32 bg-accent/5 rounded-full blur-2xl"
+            aria-hidden="true"
           ></div>
         </div>
       </div>
     </div>
 
     <!-- Background Pattern -->
-    <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
       <div
         class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"
       ></div>
@@ -268,16 +305,18 @@ const Hero = () => html`
     </div>
   </section>
 
-  <!-- Chat Button (Fixed Position) -->
+  <!-- Chat Button -->
   <div id="chat-button" class="fixed bottom-6 right-6 z-50">
     <button
       class="bg-accent hover:bg-accent/90 text-accent-foreground p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+      aria-label="Open chat support"
     >
       <svg
         class="h-6 w-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
+        aria-hidden="true"
       >
         <path
           stroke-linecap="round"
@@ -290,9 +329,7 @@ const Hero = () => html`
   </div>
 
   <!-- Chat Sidebar -->
-   ${ChatSidebar()}
-  
-  </div>
+  ${ChatSidebar()}
 `;
 
 export default Hero;
