@@ -1,9 +1,7 @@
 import { html } from "hono/html";
 
 const Navbar = () => html`
-  <nav
-    class="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border"
-  >
+  <nav>
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between h-16">
         <!-- Left: Company Name -->
