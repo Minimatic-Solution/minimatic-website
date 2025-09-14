@@ -393,25 +393,11 @@ const RootLayout = (props: { title: string; children: any }) => html`
       </script>
 
       <!-- Favicon -->
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/favicon/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon/favicon-16x16.png"
-      />
-      <link rel="manifest" href="/manifest.json" />
+
+      <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+      <link rel="icon" sizes="32x32" href="/favicon/favicon-32x32.png" />
+      <link rel="icon" sizes="16x16" href="/favicon/favicon-16x16.png" />
 
       <!-- Preconnect for Performance -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
