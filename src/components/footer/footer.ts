@@ -177,49 +177,6 @@ const Footer = () => html`
       </div>
     </div>
   </footer>
-  <!-- Schema Markup for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Minimatic Solutions",
-      "description": "Delivering full-cycle software solutions that empower businesses to grow, innovate, and succeed.",
-      "url": "https://minimaticsolutions.com",
-      "logo": "https://minimaticsolutions.com/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Padma Abashik",
-        "addressLocality": "Rajshahi",
-        "addressCountry": "BD"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+8801723100925",
-          "contactType": "customer service",
-          "availableLanguage": ["English", "Bengali"]
-        },
-        {
-          "@type": "ContactPoint",
-          "email": "info@minimatic.com",
-          "contactType": "customer service"
-        }
-      ],
-      "sameAs": [
-        "https://x.com/shahinali_dev",
-        "https://www.linkedin.com/company/minimatic-solutions/",
-        "https://github.com/Minimatic-Solution"
-      ],
-      "foundingDate": "2020",
-      "areaServed": "BD",
-      "serviceType": [
-        "Web Development",
-        "Mobile App Development",
-        "AI & Machine Learning",
-        "Cloud Solutions"
-      ]
-    }
-  </script>
 `;
 
 export default Footer;

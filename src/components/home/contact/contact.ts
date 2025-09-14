@@ -30,43 +30,6 @@ const Contact = () => html`
       </div>
     </div>
   </section>
-  <!-- Schema Markup for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "name": "Contact Us - Minimatic Solutions",
-      "description": "Get in touch with Minimatic Solutions for your web development, mobile app development, and custom software needs.",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "Minimatic Solutions",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Padma Garden, Road No 3, Padma Abasahik",
-          "addressLocality": "Rajshahi",
-          "addressCountry": "BD"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+8801723100925",
-            "contactType": "customer service",
-            "availableLanguage": ["English", "Bengali"]
-          },
-          {
-            "@type": "ContactPoint",
-            "email": "hello@minimaticsolutions.com",
-            "contactType": "customer service"
-          }
-        ],
-        "sameAs": [
-          "https://x.com/shahinali_dev",
-          "https://www.linkedin.com/company/minimatic-solutions/",
-          "https://github.com/Minimatic-Solution"
-        ]
-      }
-    }
-  </script>
 `;
 
 export default Contact;
