@@ -1,12 +1,15 @@
 import { html } from "hono/html";
 
 const DevelopmentProcess = () => html`
-  <!-- Process Section -->
-  <div
+  <section
     class="scroll-reveal bg-background rounded-2xl p-8 lg:p-12 border border-border"
+    aria-labelledby="process-heading"
   >
     <div class="text-center mb-12">
-      <h3 class="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+      <h3
+        id="process-heading"
+        class="text-2xl lg:text-3xl font-bold text-foreground mb-4"
+      >
         Our Development Process
       </h3>
       <p class="text-muted-foreground max-w-2xl mx-auto">
@@ -15,11 +18,11 @@ const DevelopmentProcess = () => html`
       </p>
     </div>
 
-    <div class="grid md:grid-cols-4 gap-8">
-      <!-- Discovery -->
-      <div class="text-center">
+    <ol class="grid md:grid-cols-4 gap-8" role="list">
+      <li class="text-center" role="listitem">
         <div
           class="bg-primary/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+          aria-hidden="true"
         >
           <span class="text-primary font-bold text-lg">1</span>
         </div>
@@ -27,12 +30,12 @@ const DevelopmentProcess = () => html`
         <p class="text-sm text-muted-foreground">
           Understanding your requirements and business goals
         </p>
-      </div>
+      </li>
 
-      <!-- Planning -->
-      <div class="text-center">
+      <li class="text-center" role="listitem">
         <div
           class="bg-accent/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+          aria-hidden="true"
         >
           <span class="text-accent font-bold text-lg">2</span>
         </div>
@@ -40,12 +43,12 @@ const DevelopmentProcess = () => html`
         <p class="text-sm text-muted-foreground">
           Creating detailed project roadmap and architecture
         </p>
-      </div>
+      </li>
 
-      <!-- Development -->
-      <div class="text-center">
+      <li class="text-center" role="listitem">
         <div
           class="bg-primary/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+          aria-hidden="true"
         >
           <span class="text-primary font-bold text-lg">3</span>
         </div>
@@ -53,12 +56,12 @@ const DevelopmentProcess = () => html`
         <p class="text-sm text-muted-foreground">
           Agile development with regular updates and feedback
         </p>
-      </div>
+      </li>
 
-      <!-- Deployment -->
-      <div class="text-center">
+      <li class="text-center" role="listitem">
         <div
           class="bg-accent/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+          aria-hidden="true"
         >
           <span class="text-accent font-bold text-lg">4</span>
         </div>
@@ -66,9 +69,9 @@ const DevelopmentProcess = () => html`
         <p class="text-sm text-muted-foreground">
           Launch and ongoing support with monitoring
         </p>
-      </div>
-    </div>
-  </div>
+      </li>
+    </ol>
+  </section>
 `;
 
 export default DevelopmentProcess;
