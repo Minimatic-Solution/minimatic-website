@@ -50,34 +50,89 @@ const Hero = () => html`
             </a>
           </div>
 
-          <!-- Trust Indicators -->
+          <!-- Connect with us -->
           <div class="space-y-4">
             <p class="text-sm text-muted-foreground font-medium">
-              Trusted by innovative companies worldwide
+              Connect with us
             </p>
-            <div class="flex items-center gap-6 opacity-60">
-              <div
-                class="text-xs font-semibold text-muted-foreground tracking-wider"
+            <div class="flex items-center gap-6 opacity-80">
+              <!-- Email -->
+              <a href="mailto:hello@example.com" class="hover:text-accent">
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/company/minimatic-solutions/"
+                target="_blank"
+                class="hover:text-accent"
               >
-                MICROSOFT
-              </div>
-              <div
-                class="text-xs font-semibold text-muted-foreground tracking-wider"
+                <svg
+                  class="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 0h-14c-2.77 0-5 2.23-5 
+                    5v14c0 2.77 2.23 5 5 5h14c2.77 0 
+                    5-2.23 5-5v-14c0-2.77-2.23-5-5-5zM8.34 
+                    19h-3v-10h3v10zM6.84 7.47c-.96 
+                    0-1.74-.78-1.74-1.74s.78-1.74 
+                    1.74-1.74 1.74.78 
+                    1.74 1.74-.78 1.74-1.74 
+                    1.74zM20 19h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
+                    0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.36h.04c.4-.75 
+                    1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.6v5.6z"
+                  />
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com/Minimatic-Solution"
+                target="_blank"
+                class="hover:text-accent"
               >
-                GOOGLE
-              </div>
-              <div
-                class="text-xs font-semibold text-muted-foreground tracking-wider"
-              >
-                AMAZON
-              </div>
-              <div
-                class="text-xs font-semibold text-muted-foreground tracking-wider"
-              >
-                STRIPE
-              </div>
+                <svg
+                  class="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 
+                    5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 
+                    0-.29-.01-1.05-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 
+                    1.21.09 1.85 1.24 1.85 1.24 
+                    1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 
+                    0-1.32.47-2.4 1.24-3.25-.12-.3-.54-1.52.12-3.18 
+                    0 0 1.01-.32 3.3 1.23.96-.27 
+                    1.98-.4 3-.41 1.02.01 2.04.14 
+                    3 .41 2.29-1.55 3.3-1.23 
+                    3.3-1.23.66 1.66.24 2.88.12 
+                    3.18.77.85 1.24 1.93 1.24 
+                    3.25 0 4.63-2.81 5.66-5.49 
+                    5.96.43.37.81 1.1.81 2.22 
+                    0 1.6-.01 2.89-.01 3.29 
+                    0 .32.22.7.82.58C20.56 21.8 
+                    24 17.3 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
+
         </div>
 
         <!-- Right Content - Feature Cards -->
