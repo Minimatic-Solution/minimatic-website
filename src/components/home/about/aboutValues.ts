@@ -1,7 +1,10 @@
 import { html } from "hono/html";
 
 const AboutValues = () => html`
-  <section class="mb-20 fade-in stagger-4 ">
+  <section
+    class="mb-20 fade-in stagger-4 "
+    aria-labelledby="our-core-values-heading"
+  >
     <h2
       class="text-4xl lg:text-5xl font-bold font-serif text-center mb-16 text-gray-800"
     >

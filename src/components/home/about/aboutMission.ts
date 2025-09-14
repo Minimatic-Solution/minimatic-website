@@ -1,7 +1,10 @@
 import { html } from "hono/html";
 
 const AboutMission = () => html`
-  <section class="text-center mb-20 fade-in stagger-3">
+  <section
+    class="text-center mb-20 fade-in stagger-3"
+    aria-labelledby="our-mission-heading"
+  >
     <div
       class="scroll-reveal max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-8 lg:p-12 rounded-3xl border border-gray-200 shadow-lg"
     >

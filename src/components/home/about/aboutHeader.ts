@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const AboutHeader = () => html`
-  <div class="text-center mb-20 fade-in">
+  <div class="text-center mb-20 fade-in" aria-labelledby="about-heading">
     <div
       class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full text-sm font-medium text-gray-600 mb-6 scroll-reveal"
     >
@@ -10,6 +10,7 @@ const AboutHeader = () => html`
     </div>
     <h1
       class="text-5xl lg:text-7xl font-bold font-serif mb-6 text-gradient leading-tight scroll-reveal"
+      id="about-heading"
     >
       Crafting Digital
       <br />

@@ -6,7 +6,11 @@ import AboutValues from "./aboutValues";
 import AboutWhoWeAre from "./aboutWhoWeAre";
 
 const About = () => html`
-  <section id="about" class="relative py-20 lg:py-32 overflow-hidden">
+  <section
+    id="about"
+    class="relative py-20 lg:py-32 overflow-hidden"
+    aria-labelledby="about-section"
+  >
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-mesh"></div>
     <div

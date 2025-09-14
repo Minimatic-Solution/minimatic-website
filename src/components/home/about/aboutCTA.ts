@@ -1,7 +1,7 @@
 import { html } from "hono/html";
 
 const AboutCTA = () => html`
-  <section class="text-center fade-in">
+  <section class="text-center fade-in" aria-labelledby="cta-heading">
     <div
       class="bg-gradient-to-r from-blue-600 to-purple-600 p-1 rounded-3xl max-w-4xl mx-auto scroll-reveal"
     >
